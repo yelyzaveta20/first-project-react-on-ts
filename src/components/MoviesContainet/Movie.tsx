@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {FC} from 'react';
+import {IMovie} from "../../interfaces/movisInterface";
 
-const Movie = () => {
+interface IProps{
+    movie:IMovie
+}
+const Movie:FC<IProps> = ({movie}) => {
+    const {id,title}=movie
     return (
         <div>
-            
+            <div>id: {id}</div>
+            <div>title: {title}</div>
         </div>
     );
 };
