@@ -1,13 +1,16 @@
+import {apiService} from "../services/apiService";
+
 const baseURL='https://api.themoviedb.org/3'
 const movie ='/discover/movie'
-const general='/genre/movie'
+const genre='/genre/movie/list'
+const poster='https://image.tmdb.org/t/p/w500'
 const urls={
     movie:{
-        base:movie
+        base:movie,
     },
-    general:{
-        base: `${general}/list`
+    genre:{
+        base: genre
     }
 }
 
-export {baseURL, urls}
+export {baseURL, urls,poster}

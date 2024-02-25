@@ -1,0 +1,11 @@
+.Detauls{
+    width: 80vw;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgDetails{
+    width: 20vw;
+    height: 60vh
+;
+}

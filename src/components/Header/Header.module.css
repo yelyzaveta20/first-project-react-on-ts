@@ -22,3 +22,7 @@ a{
     font-family: "Anton", sans-serif;
     font-weight: bold;
 }
+.img{
+    height: 70px;
+    width: 70px;
+}

@@ -1,0 +1,18 @@
+.Movies{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+
+}
+.div{
+    height: 300px;
+
+    width: 25%; /* 100% / 4 */
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+img{
+    height: 200px;
+    width: 130px;
+}

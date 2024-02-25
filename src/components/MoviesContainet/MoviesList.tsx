@@ -3,6 +3,8 @@ import {IMovie} from "../../interfaces/movisInterface";
 import {movieService} from "../../services/movieService";
 
 import Movie from "./Movie";
+import {poster} from "../../constans/urls";
+
 
 interface IProps {
 
@@ -20,14 +22,13 @@ const MoviesList:FC<IProps> = () => {
             //     results
             // }
             setMovies(data.results)
-            console.log(data.results);
             // setPrevNext({prev:data.next, next:data.page})
         })
     }, []);
     return (
         <div>
             <div>
-                {movies.map(movies=><Movie movie={movies}/>)}
+                {movies.map(movies=><Movie key={movies.id} movie={movies} poster={poster}/>)}
             </div>
             <div>
                 <button>prev</button>
