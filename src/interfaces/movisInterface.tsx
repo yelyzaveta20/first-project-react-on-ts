@@ -17,3 +17,7 @@ export interface IAll{
 export interface IGenre{
     genre:any
 }
+export interface IG{
+    id:number,
+    name:string
+}
