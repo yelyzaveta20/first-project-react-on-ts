@@ -4,12 +4,10 @@ import {movieService} from "../../services/movieService";
 
 import Movie from "./Movie";
 import {poster} from "../../constans/urls";
+import css from './Movie.module.css'
 
 
-interface IProps {
-
-}
-const MoviesList:FC<IProps> = () => {
+const MoviesList = () => {
     const [movies, setMovies] = useState<IMovie[]>([])
     // const [query, setQuery]=useSearchParams({page:'1'})
     // const {page, nextPage, prevPage}=usePageQuery()
@@ -27,10 +25,10 @@ const MoviesList:FC<IProps> = () => {
     }, []);
     return (
         <div>
-            <div>
+            <div className={css.Movies}>
                 {movies.map(movies=><Movie key={movies.id} movie={movies} poster={poster}/>)}
             </div>
-            <div>
+            <div className={css.buttons}>
                 <button>prev</button>
                 <button >next</button>
             </div>

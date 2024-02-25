@@ -3,7 +3,8 @@ import MainLayout from "./layouts/MainLayout";
 import MoviesList from "./components/MoviesContainet/MoviesList";
 import MovieDetails from "./components/MovieDetails/MovieDetails";
 import React from "react";
-import Genres from "./components/generalsComponent/Genres";
+import GenreMovies from "./components/genreMoviesComponents/GenreMovies";
+import GenresPage from "./pages/GenresPage";
 
 const router=createBrowserRouter([
     {
@@ -19,7 +20,11 @@ const router=createBrowserRouter([
                 path:'details', element:<MovieDetails/>
             },
             {
-                path:'genres', element:<Genres/>
+                path:'genres', element:<GenresPage/>, children:[
+                    {
+                        path:'moviesgeeneres', element:<GenreMovies/>
+                    }
+                ]
             }
 
         ]

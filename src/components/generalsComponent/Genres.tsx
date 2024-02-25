@@ -1,20 +1,17 @@
-import React, {FC, useEffect, useState} from 'react';
-import {IG, IGenre, IMovie} from "../../interfaces/movisInterface";
+import React, {useEffect, useState} from 'react';
+import {IGenre} from "../../interfaces/movisInterface";
 import {genreService} from "../../services/genreService";
 import Genre from "./Genre";
-interface IProps{
-    // genres:IG
-}
+import css from './Genre.module.css'
 const Genres = () => {
     const [genres, setGenres] = useState<IGenre[]>([])
     useEffect(() => {
-        genreService.getAll().then(({data})=>setGenres(data.genres))
+       genreService.getAll().then(({data})=>setGenres(data.genres))
     }, []);
-    console.log(genres)
 
 
     return (
-        <div>
+        <div className={css.Genre}>
             {genres.map(genre=><Genre genre={genre}/>)}
         </div>
     );

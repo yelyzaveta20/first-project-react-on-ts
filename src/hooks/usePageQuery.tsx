@@ -2,7 +2,7 @@ import {useSearchParams} from "react-router-dom";
 // import {FC} from "react";
 //
 // interface IQuery{
-//     page:string
+//     page:number
 //     prevPage: () => void
 //     nextPage: () => void
 //     prev:any

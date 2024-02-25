@@ -2,22 +2,22 @@ export interface IMovie {
     id:number,
     original_title:string,
     overview:string,
-    poster_path:any,
+    poster_path:string,
     title:string,
     vote_average:number,
-    genre_ids:any
+    genre_ids:number[]
 }
-export interface IAll{
-    page:any,
-    results:any,
+export interface IMovies{
+    page:number,
+    results:IMovie[],
     total_pages:number,
     total_results:number
 }
 
-export interface IGenre{
-    genre:any
+export interface IGenres{
+    genres:IGenre[]
 }
-export interface IG{
+export interface IGenre{
     id:number,
     name:string
 }

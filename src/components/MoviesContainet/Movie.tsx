@@ -15,13 +15,11 @@ const Movie:FC<IProps> = ({movie}) => {
     const posterurl=`${poster}${poster_path}`
     const handle = () => {
         navigate('/details', {state:{movie}})
-        console.log({state:{movie}})
     }
     return (
-        <div  className={css.Movies}>
+        <div  >
             <div onClick={handle} className={css.div}>
-            <div>id: {id}</div>
-            <div>title: {title}</div>
+            <div className={css.title}>{title}</div>
             <img  src={posterurl} alt={title}/></div>
         </div>
     );
