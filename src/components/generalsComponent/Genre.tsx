@@ -13,7 +13,7 @@ const Genre:FC<IProps>=({genre}) => {
     }
     return (
         <div className={css.div}>
-            <button onClick={handle}>{name}</button>
+            <button onClick={handle} >{name}</button>
         </div>
     );
 };

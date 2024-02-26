@@ -1,4 +1,3 @@
-import {apiService} from "../services/apiService";
 
 const baseURL='https://api.themoviedb.org/3'
 const movie ='/discover/movie'

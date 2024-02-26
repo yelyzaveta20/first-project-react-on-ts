@@ -11,7 +11,7 @@ const {title,original_language,original_title, overview,popularity,release_date,
     return (
         <div className={css.Detauls}>
             <button onClick={()=>navigate(-1)}>Home</button>
-        <div>Title:{title}</div>
+        <div >Title:{title}</div>
             <img className={css.imgDetails} src={posterurl} alt={title}/>
         <div>original_language: {original_language}</div>
         <div>original_title: {original_title}</div>

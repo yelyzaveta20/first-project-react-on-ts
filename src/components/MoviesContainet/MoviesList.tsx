@@ -5,32 +5,45 @@ import {movieService} from "../../services/movieService";
 import Movie from "./Movie";
 import {poster} from "../../constans/urls";
 import css from './Movie.module.css'
+import {usePageQuery} from "../../hooks/usePageQuery";
 
 
 const MoviesList = () => {
     const [movies, setMovies] = useState<IMovie[]>([])
-    // const [query, setQuery]=useSearchParams({page:'1'})
-    // const {page, nextPage, prevPage}=usePageQuery()
-    // const [prevNext, setPrevNext] = useState({prev:null, next:null})
+    const {page, nextPage, prevPage } = usePageQuery();
     useEffect(() => {
         movieService.getAll().then(({data})=>{
-            // const {page,results}=data
-            // return{
-            //     page,
-            //     results
-            // }
             setMovies(data.results)
-            // setPrevNext({prev:data.next, next:data.page})
+            console.log(data)
         })
-    }, []);
+    }, [page]);
+    // useEffect(() => {
+    //     movieService.getAllPage(page).then(({data})=>setMovies(()=> {
+    //         const {page, results} = data;
+    //         return {
+    //             page,
+    //             results
+    //         }
+    //
+    //     }))
+    // }, [page]);
+    // useEffect(() => {
+    //     movieService.getAllPage(page).then(({ data }) => {
+    //         const { page, results } = data;
+    //         setMovies({
+    //             page,
+    //             results
+    //         });
+    //     });
+    // }, [page]);
     return (
         <div>
             <div className={css.Movies}>
                 {movies.map(movies=><Movie key={movies.id} movie={movies} poster={poster}/>)}
             </div>
             <div className={css.buttons}>
-                <button>prev</button>
-                <button >next</button>
+                <button onClick={prevPage}>prev</button>
+                <button onClick={nextPage}>next</button>
             </div>
         </div>
     );
