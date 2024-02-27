@@ -1,0 +1,22 @@
+.GenreMovie{
+    /*display: grid;*/
+    /*grid-template-columns: repeat(5,1fr);*/
+    /*grid-column-gap: 20px;*/
+    /*grid-row-gap: 40px;*/
+    width: 80vw;
+display: flex;
+    flex-wrap: wrap;
+
+}
+h2{
+    height: 6vh;
+    width: 14vw;
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 16vw;
+}
+.rating{
+    margin-left: -10px;
+}
