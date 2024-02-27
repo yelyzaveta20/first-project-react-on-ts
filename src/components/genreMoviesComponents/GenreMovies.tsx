@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-import {IGenre, IMovie, IMovies} from "../../interfaces/movisInterface";
+import {IMovie} from "../../interfaces/movisInterface";
 import {movieService} from "../../services/movieService";
 import GenreMovie from "./GenreMovie";
 import css from './GenreMovie.module.css'
