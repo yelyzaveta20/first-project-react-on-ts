@@ -5,5 +5,6 @@ import {urls} from "../constans/urls";
 
 const sercheService={
     getAll:():IRes<ISerches>=>apiService.get(urls.serch.base),
+    getQuery:(query:string):IRes<any>=>apiService.get(urls.serch.sercheByserch(query))
 }
 export {sercheService}

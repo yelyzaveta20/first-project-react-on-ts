@@ -8,13 +8,14 @@ const serch='https://api.themoviedb.org/3/search/keyword'
 const urls={
     movie:{
         base:movie,
-        withGenser:(idGenre:number, page:number)=>`${movie}?with_genres=${idGenre}&page=${page}`
+        withGenser:(idGenre:number)=>`${movie}?with_genres=${idGenre}`
     },
     genre:{
         base:genre
     },
     serch:{
-        base:serch
+        base:serch,
+        sercheByserch:(query:string)=>`${serch}?query=${query}`
     }
 }
 

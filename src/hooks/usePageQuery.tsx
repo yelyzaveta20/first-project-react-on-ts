@@ -34,22 +34,7 @@ interface PageQuery {
 }
 
 const usePageQuery = (): PageQuery => {
-    // const [query, setQuery] = useSearchParams({ page: '1' });
-    //
-    // const page = query.get('page');
-    //
-    // return {
-    //     page, // Если page равен null, устанавливаем значение по умолчанию '1'
-    //     prevPage: () => setQuery((prev) => {
-    //         prev.set('page', (+prev.get('page') - 1).toString())
-    //         return prev;
-    //     }),
-    //     nextPage: () => setQuery((prev) => {
-    //         const nextPage = +prev.get('page')! + 1; // '!' используется, чтобы сообщить TypeScript, что page не равно null
-    //         prev.set('page', nextPage.toString());
-    //         return prev;
-    //     }),
-    // };
+
     const [query, setQuery] = useSearchParams({ page: '1' });
 
     const page = parseInt(query.get('page') || '1', 10);

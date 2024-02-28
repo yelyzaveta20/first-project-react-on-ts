@@ -33,13 +33,16 @@ a{
 
 }
 a.dark{
-    color: #afc57a;
+    color: #ffffff;
 }
 .img{
     height: 70px;
     width: 70px;
 }
-
+button.dark{
+    background: chartreuse;
+    color: #020246;
+}
 /*input[type=checkbox]{*/
 /*    height: 0;*/
 /*    width: 0;*/

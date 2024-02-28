@@ -6,6 +6,8 @@ import React from "react";
 import GenreMovies from "./components/genreMoviesComponents/GenreMovies";
 import GenresPage from "./pages/GenresPage";
 import SerchesPage from "./pages/SerchesPage";
+import {genreService} from "./services/genreService";
+import {movieService} from "./services/movieService";
 
 const router=createBrowserRouter([
     {
@@ -21,9 +23,9 @@ const router=createBrowserRouter([
                 path:'details', element:<MovieDetails/>
             },
             {
-                path:'genres', element:<GenresPage/>, children:[
+                path:'genres', element:<GenresPage/>,  children:[
                     {
-                        path:'moviesgeeneres', element:<GenreMovies/>
+                        path:'moviesgeeneres/:id', element:<GenreMovies/>
                     }
                 ]
             },
