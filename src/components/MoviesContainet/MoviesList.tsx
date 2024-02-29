@@ -8,6 +8,8 @@ import css from './Movie.module.css'
 
 import {useSearchParams} from "react-router-dom";
 import GenreMovie from "../genreMoviesComponents/GenreMovie";
+import Serche from "../searchComponent/Serche";
+import Serches from "../searchComponent/Serches";
 
 
 const MoviesList = () => {

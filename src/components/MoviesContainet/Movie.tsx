@@ -4,6 +4,7 @@ import {poster} from "../../constans/urls";
 import css from './Movie.module.css'
 import {useNavigate} from "react-router-dom";
 import {Rating} from "@mui/material";
+import {useTheme} from "../../hooks/useContest";
 
 
 interface IProps{
@@ -11,12 +12,14 @@ interface IProps{
     poster:any
 }
 const Movie:FC<IProps> = ({movie}) => {
+    // const { darkTheme, toggleTheme } = useTheme();
     let navigate = useNavigate();
     const {id,title, poster_path, vote_average}=movie
     const posterurl=`${poster}${poster_path}`
     const handle = () => {
         navigate('/details', {state:{movie}})
     }
+// navigate('search', {state:{movie}})
     return (
         <div  >
             <div onClick={handle} className={css.div}>

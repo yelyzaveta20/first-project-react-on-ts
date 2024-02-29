@@ -17,6 +17,7 @@
 }
 .div{
     width: 13vw;
+    cursor: pointer;
 }
 img{
     height: 40vh;
@@ -36,6 +37,7 @@ button{
     color: #652f06;
     font-size: 20px;
     margin: 10px 0 10px 0;
+    cursor: pointer;
 }
 .rating{
     margin-left: -10px;

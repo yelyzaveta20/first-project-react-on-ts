@@ -26,7 +26,7 @@ const Genre:FC<IProps>=({genre}) => {
     return (
         <div className={css.div}>
             {/*<button onClick={handle} >{name}</button>*/}
-            <NavLink className={`${darkTheme ? css.dark : ''}`} to={`moviesgeeneres/${id}`}>{name}</NavLink>
+            <NavLink className={`${css.navLink} ${darkTheme ? css.dark : ''}`} to={`moviesgeeneres/${id}`}>{name}</NavLink>
         </div>
     );
 };
