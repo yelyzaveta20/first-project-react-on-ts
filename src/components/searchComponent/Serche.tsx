@@ -12,12 +12,12 @@ interface IProps{
 const Serche :FC<IProps>= ({movie, poster}) => {
     let navigate = useNavigate();
 
-    const { title, poster_path, vote_average}=movie
+    const {id, title, poster_path, vote_average}=movie
 
     // const {state:{movie}}=useLocation()
     const posterurl=`${poster}${poster_path}`
     const handle = () => {
-        navigate('/details', {state:{movie}})
+        navigate(`/details/${id}`)
     }
     return (
         <div onClick={handle}>
