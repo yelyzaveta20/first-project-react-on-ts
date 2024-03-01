@@ -14,10 +14,10 @@ interface IProps{
 const Movie:FC<IProps> = ({movie}) => {
     // const { darkTheme, toggleTheme } = useTheme();
     let navigate = useNavigate();
-    const {title, poster_path, vote_average}=movie
+    const {id,title, poster_path, vote_average}=movie
     const posterurl=`${poster}${poster_path}`
     const handle = () => {
-        navigate('/details', {state:{movie}})
+        navigate(`/details/${id}`)
     }
     const { darkTheme } = useTheme();
     return (
@@ -30,4 +30,4 @@ const Movie:FC<IProps> = ({movie}) => {
     );
 };
 
-export default Movie;
+export  {Movie};

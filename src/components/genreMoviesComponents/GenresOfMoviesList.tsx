@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react';
 
 import {IMovie} from "../../interfaces/movisInterface";
 import {movieService} from "../../services/movieService";
-import GenreMovie from "./GenreMovie";
-import css from './GenreMovie.module.css'
+import {GenreOfMovies} from "./GenreOfMovies";
+import css from './GenreOfMovie.module.css'
 import { useParams, useSearchParams} from "react-router-dom";
 
-const GenreMovies = () => {
+const GenresOfMoviesList = () => {
     const [moviesGenres, setMoviesGenres] = useState<IMovie[]>([])
     const [query,setQuery] = useSearchParams({page:'1'})
     const pageCurrent = query.get('page');
@@ -33,7 +33,7 @@ const next=()=>{
 
     return (
         <div className={css.GenreMovie}>
-            {moviesGenres.map(movie => (<GenreMovie key={movie.id} movie={movie}/>))}
+            {moviesGenres.map(movie => (<GenreOfMovies key={movie.id} movie={movie}/>))}
             <div className={css.buttons}>
                 <button onClick={prev}
                     disabled={!pageCurrent || +pageCurrent === 1}>prev
@@ -50,4 +50,4 @@ const next=()=>{
 };
 
 
-export default GenreMovies;
+export {GenresOfMoviesList};

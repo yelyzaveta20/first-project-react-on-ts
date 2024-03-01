@@ -31,4 +31,4 @@ const Serche :FC<IProps>= ({movie, poster}) => {
     );
 };
 
-export default Serche;
+export {Serche};

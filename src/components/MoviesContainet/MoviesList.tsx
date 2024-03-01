@@ -2,12 +2,13 @@ import React, {useEffect, useState} from "react";
 import {IMovie} from "../../interfaces/movisInterface";
 import {movieService} from "../../services/movieService";
 
-import Movie from "./Movie";
+
 import {poster} from "../../constans/urls";
 import css from './Movie.module.css'
 
 import {useSearchParams} from "react-router-dom";
 import {useTheme} from "../../hooks/useContest";
+import {Movie} from "./Movie";
 
 
 const MoviesList = () => {
@@ -42,4 +43,4 @@ const MoviesList = () => {
     );
 };
 
-export default MoviesList;
+export {MoviesList};

@@ -5,30 +5,6 @@ import css from './Header.module.css'
 import {useTheme} from "../../hooks/useContest";
 const Header = () => {
 
-    // const [darkTheme, setDarkTheme] = useState(false);
-    //
-    //
-    // const handleThemeChange = () => {
-    //     setDarkTheme(prevTheme => !prevTheme);
-    //     if (!darkTheme) {
-    //         document.body.style.backgroundColor = "#647f94";
-    //     } else {
-    //         document.body.style.backgroundColor = "#020246";
-    //     }
-    // };
-
-
-    // const body = document.body
-    // body.classList.add('bodyOne')
-    // const toggleTheme = (): void => {
-    //
-    //     const root = document.body.querySelector(":root");
-    //     setIsDarkTheme((prev) => !prev);
-    //     if (root) {
-    //         root.classList.toggle('dark', !isDarkTheme);
-    //     }
-    // };
-    // const { darkTheme, toggleTheme } = useTheme();
     const { darkTheme, toggleTheme } = useTheme();
 
     return (
@@ -52,4 +28,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export {Header};

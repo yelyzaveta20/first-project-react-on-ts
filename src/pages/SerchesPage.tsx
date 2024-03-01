@@ -1,5 +1,4 @@
-import React from 'react';
-import Serches from "../components/searchComponent/Serches";
+import {Serches} from "../components";
 
 const SerchesPage = () => {
     return (
@@ -9,4 +8,4 @@ const SerchesPage = () => {
     );
 };
 
-export default SerchesPage;
+export {SerchesPage};

@@ -3,12 +3,12 @@ import {IMovie} from "../../interfaces/movisInterface";
 import { useNavigate} from "react-router-dom";
 import {poster} from "../../constans/urls";
 import {Rating} from "@mui/material";
-import css from './GenreMovie.module.css'
+import css from './GenreOfMovie.module.css'
 
 interface IProps{
     movie:IMovie
 }
-const GenreMovie:FC<IProps> = ({movie}) => {
+const GenreOfMovies:FC<IProps> = ({movie}) => {
     // const [genreMovie, setGenreMovie] = useState<IGenre[]>([])
     let navigate = useNavigate();
     const { title, poster_path, vote_average}=movie
@@ -31,4 +31,4 @@ const GenreMovie:FC<IProps> = ({movie}) => {
     );
 };
 
-export default GenreMovie;
+export {GenreOfMovies};

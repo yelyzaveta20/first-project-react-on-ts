@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {IGenre} from "../../interfaces/movisInterface";
+
 import {genreService} from "../../services/genreService";
-import Genre from "./Genre";
+
 import css from './Genre.module.css'
 import {useTheme} from "../../hooks/useContest";
-const Genres = () => {
+import {IGenre} from "../../interfaces/genreInterface";
+import {Genre} from "./Genre";
+
+const GenresList = () => {
     const [genres, setGenres] = useState<IGenre[]>([])
     useEffect(() => {
        genreService.getAll().then(({data})=>setGenres(data.genres))
@@ -18,4 +21,4 @@ const Genres = () => {
     );
 };
 
-export default Genres;
+export {GenresList};

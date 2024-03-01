@@ -1,7 +1,9 @@
 import React, {FC, useState} from 'react';
-import {IGenre} from "../../interfaces/movisInterface";
+
 import css from './Genre.module.css'
 import {NavLink, useNavigate} from "react-router-dom";
+import {IGenre} from "../../interfaces/genreInterface";
+
 interface IProps{
     genre:IGenre
 }
@@ -31,4 +33,4 @@ const Genre:FC<IProps>=({genre}) => {
     );
 };
 
-export default Genre;
+export {Genre};

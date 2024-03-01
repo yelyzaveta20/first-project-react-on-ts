@@ -3,9 +3,10 @@ import {useSearchParams} from "react-router-dom";
 
 import {IMovie} from "../../interfaces/movisInterface";
 import {sercheService} from "../../services/sercheService";
-import Serche from "./Serche";
+
 import {poster} from "../../constans/urls";
 import css from './Serches.module.css'
+import {Serche} from "./Serche";
 
 const Serches = () => {
 
@@ -72,4 +73,4 @@ const handleShowAll=()=>{
     );
 };
 
-export default Serches;
+export {Serches};

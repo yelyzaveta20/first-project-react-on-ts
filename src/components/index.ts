@@ -1,0 +1,6 @@
+export * from './genreMoviesComponents'
+export * from './generalsComponent'
+export * from './Header'
+export * from './MovieDetails'
+export * from './MoviesContainet'
+export * from './searchComponent'
