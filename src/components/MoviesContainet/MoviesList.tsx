@@ -7,9 +7,7 @@ import {poster} from "../../constans/urls";
 import css from './Movie.module.css'
 
 import {useSearchParams} from "react-router-dom";
-import GenreMovie from "../genreMoviesComponents/GenreMovie";
-import Serche from "../searchComponent/Serche";
-import Serches from "../searchComponent/Serches";
+import {useTheme} from "../../hooks/useContest";
 
 
 const MoviesList = () => {
@@ -26,10 +24,10 @@ const MoviesList = () => {
 
         setQuery({ ...query, page: newPage })
     }
-
+    const { darkTheme } = useTheme();
     return (
-        <div>
-            <div className={css.Movies}>
+        <div className={`${darkTheme?css.darkMovie:css.lightMovie}`}>
+            <div className={`${css.Movies}`}>
                 {movies.map(movies=><Movie key={movies.id} movie={movies} poster={poster}/>)}
             </div>
             <div className={css.buttons}>

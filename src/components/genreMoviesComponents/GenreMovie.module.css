@@ -20,3 +20,11 @@ h2{
 .rating{
     margin-left: -10px;
 }
+.title{
+    justify-content: center;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}

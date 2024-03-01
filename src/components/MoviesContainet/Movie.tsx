@@ -14,16 +14,16 @@ interface IProps{
 const Movie:FC<IProps> = ({movie}) => {
     // const { darkTheme, toggleTheme } = useTheme();
     let navigate = useNavigate();
-    const {id,title, poster_path, vote_average}=movie
+    const {title, poster_path, vote_average}=movie
     const posterurl=`${poster}${poster_path}`
     const handle = () => {
         navigate('/details', {state:{movie}})
     }
-// navigate('search', {state:{movie}})
+    const { darkTheme } = useTheme();
     return (
         <div  >
             <div onClick={handle} className={css.div}>
-            <div className={css.title}>{title}</div>
+            <h2 className={`${css.title}${darkTheme ? 'dark' : ''}`}>{title}</h2>
             <img  src={posterurl} alt={title}/></div>
             <Rating className={css.rating} name="customized-10" defaultValue={vote_average} precision={0.5} max={10.0} readOnly />
         </div>

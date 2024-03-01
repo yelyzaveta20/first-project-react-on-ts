@@ -1,11 +1,38 @@
 .Detauls{
     width: 80vw;
     display: block;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+}
+.titleLider{
+    width: 80vw;
 }
 .imgDetails{
     width: 20vw;
-    height: 60vh
-;
+    height: 60vh;
+    box-shadow: 5px -9px 70px 24px rgba(2, 2, 70, 0.57);
+    border-radius: 30px;
+}
+.informationMovie{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    color: #020246;
+    font-size: 22px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    background: rgba(170, 192, 119, 0.34);
+    padding: 10px;
+    box-shadow: 5px -9px 70px 24px rgba(87,226,137,0.64);
+    border-radius: 30px;
+}
+.imgMovie{
+    width: 25vw;
+
+}
+.lider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

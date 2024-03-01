@@ -1,22 +1,21 @@
 .Movies{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
-    width: 82vw;
-
-}
-.title{
-    height: 5vh;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(5,1fr);*/
+    /*grid-column-gap: 20px;*/
+    /*grid-row-gap: 40px;*/
+    /*width: 82vw;*/
+    width: 80vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Jacquarda Bastarda 9", serif;
-    font-size: 20px;
+    flex-wrap: wrap;
     color: #020246;
 }
+
 .div{
-    width: 13vw;
+    /*width: 13vw;*/
+    /*cursor: pointer;*/
+    display: flex;
+    flex-wrap: wrap;
+    width: 16vw;
     cursor: pointer;
 }
 img{
@@ -30,15 +29,38 @@ img{
 }
 button{
     height: 4vh;
-    width: 10vw;
-    background: #afc57a;
+    width: 7vw;
+    background: rgb(3,7,243);
+    background: linear-gradient(14deg, rgba(3,7,243,0.5013655120251226) 0%, rgba(4,255,84,0.49576327112876406) 51%);
     border: 1px #020246 solid;
     font-family: "Playfair Display", serif;
-    color: #652f06;
+    color: #ffffff;
     font-size: 20px;
+    font-weight: bold;
     margin: 10px 0 10px 0;
     cursor: pointer;
+    box-shadow: 5px -9px 134px 24px rgba(120,87,226,0.64);
+    border-radius: 30px;
+
 }
 .rating{
     margin-left: -10px;
+}
+h2{
+    font-family: "Jacquarda Bastarda 9", serif;
+    color: #020246;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+
+}
+h2 .dark{
+    color: #f0f0f0;
+}
+.darkMovie{
+    color: #f0f0f0;
+}
+.lightMovie{
+    color: #020246;
 }

@@ -22,7 +22,7 @@ const GenreMovie:FC<IProps> = ({movie}) => {
         <div>
             {/*{isMatchingGenre && (*/}
                 <div onClick={handle} className={css.wrapper}>
-                    <h2>{title}</h2>
+                    <h2 className={css.title}>{title}</h2>
                     <img src={posterurl} alt={title}/>
                     <Rating className={css.rating} name="customized-10" defaultValue={vote_average} precision={0.5} max={10.0} readOnly />
                 </div>

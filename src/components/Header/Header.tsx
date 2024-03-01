@@ -1,7 +1,7 @@
 import {NavLink} from "react-router-dom";
 
 import css from './Header.module.css'
-import React, {useState} from "react";
+
 import {useTheme} from "../../hooks/useContest";
 const Header = () => {
 
@@ -29,14 +29,17 @@ const Header = () => {
     //     }
     // };
     // const { darkTheme, toggleTheme } = useTheme();
+    const { darkTheme, toggleTheme } = useTheme();
 
     return (
         <div className={`${css.Header} ${css.bodyOne} ${css.one} `}>
             <p>MY MOVIES SITE</p>
-            <NavLink to={'movies'} >Movies</NavLink>
-            <NavLink to={'genres'} >Genres</NavLink>
-            <NavLink to={`search`} >Search</NavLink>
-            <p>Theme</p>
+            <NavLink to={'movies'}>Movies</NavLink>
+            <NavLink to={'genres'}>Genres</NavLink>
+            <NavLink to={`search`}>Search</NavLink>
+            <button className={`${css.toggleButton} ${darkTheme ? 'dark' : ''}`} onClick={toggleTheme}>
+                {darkTheme ? 'Dark' : 'Light'}
+            </button>
 
             {/*<button className={`${darkTheme ? css.dark : ''}`} onClick={toggleTheme}>*/}
             {/*    {darkTheme ? 'Dark' : 'Light'}*/}

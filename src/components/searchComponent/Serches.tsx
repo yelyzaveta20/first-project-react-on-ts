@@ -1,37 +1,31 @@
 import React, {ChangeEvent, useEffect, useState} from 'react';
-import {ISerche} from "../../interfaces/movisInterface";
+import {useSearchParams} from "react-router-dom";
+
+import {IMovie} from "../../interfaces/movisInterface";
 import {sercheService} from "../../services/sercheService";
-import {useLocation, useParams, useSearchParams} from "react-router-dom";
 import Serche from "./Serche";
-import movie from "../MoviesContainet/Movie";
 import {poster} from "../../constans/urls";
+import css from './Serches.module.css'
 
 const Serches = () => {
-    // const {state:{movie}}=useLocation()
-    // console.log({state:{movie}})
-    const [serches, setSerches] = useState<ISerche[]>([]);
-    const [searchResults, setSearchResults] = useState<ISerche[]>([]);
+
+    const [movies, setMovies] = useState<IMovie[]>([]);
+    const [movieResults, setMovieResults] = useState<IMovie[]>([]);
     const [query, setQuery] = useSearchParams({ query: '', page: '1' });
     const queryValue = query.get('query') || '';
     const pageCurrent = query.get('page');
-    // const {query} =useParams()
-    // console.log(query)
 
-    // useEffect(() => {
-    //     sercheService.getAll().then(({ data }) => setSerches(data.results));
-    //
-    // }, [pageCurrent]);
 
     useEffect(() => {
-        const filteredSerches = serches.filter((serche) =>
-            serche.name.toLowerCase().includes(queryValue.toLowerCase())
+        const filteredSerches = movies.filter((serche) =>
+            serche.title.toLowerCase().includes(queryValue.toLowerCase())
         );
-        setSearchResults(filteredSerches);
-    }, [queryValue, serches]);
+        setMovieResults(filteredSerches);
+    }, [queryValue, movies]);
 
     useEffect(() => {
             sercheService.getQuery(queryValue, pageCurrent).then(({ data }) => {
-                setSearchResults(data.results);
+                setMovieResults(data.results);
             });
 
     }, [pageCurrent]);
@@ -40,7 +34,7 @@ const Serches = () => {
     };
 const handleShowAll=()=>{
     sercheService.getQuery(queryValue, pageCurrent).then(({ data }) => {
-        setSearchResults(data.results);
+        setMovieResults(data.results);
     });
 }
 
@@ -55,7 +49,7 @@ const handleShowAll=()=>{
     };
 
     return (
-        <div>
+        <div >
             <input
                 type="text"
                 value={queryValue}
@@ -63,15 +57,16 @@ const handleShowAll=()=>{
                 placeholder="Search movies..."
             />
             <button onClick={handleShowAll}>Show All</button>
-
-            {searchResults?.map((serche) => (
-                <Serche key={serche.id} serche={serche} poster={poster}/>
+            <div className={css.Serche}>
+            {movieResults?.map((movie) => (
+                <Serche key={movie.id} movie={movie} poster={poster}/>
             ))}
-            <div>
+            </div>
+            <div className={css.buttons}>
                 <button onClick={prev}
                         disabled={!pageCurrent || +pageCurrent === 1}>prev</button>
                 <button onClick={next}
-                        disabled={!pageCurrent || searchResults.length === 0}>next</button>
+                        disabled={!pageCurrent || movieResults.length === 0}>next</button>
             </div>
         </div>
     );

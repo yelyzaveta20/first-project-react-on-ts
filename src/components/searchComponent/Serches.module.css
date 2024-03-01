@@ -1,0 +1,19 @@
+.Serche{
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.posters{
+    display: flex;
+    flex-wrap: wrap;
+    width: 16vw;
+    cursor: pointer;
+}
+.rating{
+    margin-left: -10px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}

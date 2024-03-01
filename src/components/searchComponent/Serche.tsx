@@ -1,24 +1,32 @@
-import React, {FC, useState} from 'react';
-import {IMovie, ISerche} from "../../interfaces/movisInterface";
-import {poster} from "../../constans/urls";
-import {useLocation} from "react-router-dom";
+import React, {FC} from 'react';
+import {IMovie} from "../../interfaces/movisInterface";
+
+import {useNavigate} from "react-router-dom";
+import css from "./Serches.module.css";
+import {Rating} from "@mui/material";
 interface IProps{
-    serche:ISerche
+    movie:IMovie
     poster:any
 
 }
-const Serche :FC<IProps>= ({serche, poster}) => {
-    // const [movies, setMovies] = useState<IMovie[]>([])
-    const {id, name}=serche
+const Serche :FC<IProps>= ({movie, poster}) => {
+    let navigate = useNavigate();
+
+    const { title, poster_path, vote_average}=movie
 
     // const {state:{movie}}=useLocation()
-    // const {poster_path}=movie
-    // const posterurl=`${poster}${poster_path}`
+    const posterurl=`${poster}${poster_path}`
+    const handle = () => {
+        navigate('/details', {state:{movie}})
+    }
     return (
-        <div>
-            <div>id:{id}</div>
-            <div>name:{name}</div>
-            {/*<img src={posterurl} alt={name}/>*/}
+        <div onClick={handle}>
+            <div className={css.posters}>
+                <h2>{title}</h2>
+                <img src={posterurl} alt={title}/>
+                <Rating className={css.rating} name="customized-10" defaultValue={vote_average} precision={0.5} max={10.0} readOnly />
+            </div>
+
         </div>
     );
 };
