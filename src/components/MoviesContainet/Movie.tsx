@@ -4,7 +4,7 @@ import {poster} from "../../constans/urls";
 import css from './Movie.module.css'
 import {useNavigate} from "react-router-dom";
 import {Rating} from "@mui/material";
-import {useTheme} from "../../hooks/useContest";
+import {useTheme} from "../../hooks/ThemeContext";
 
 
 interface IProps{
@@ -21,9 +21,9 @@ const Movie:FC<IProps> = ({movie}) => {
     }
     const { darkTheme } = useTheme();
     return (
-        <div  >
-            <div onClick={handle} className={css.div}>
-            <h2 className={`${css.title}${darkTheme ? 'dark' : ''}`}>{title}</h2>
+        <div >
+            <div onClick={handle} className={`${css.div} ${darkTheme ? css.movieLight : css.movieDark}`}>
+            <h2 className={css.title}>{title}</h2>
             <img  src={posterurl} alt={title}/></div>
             <Rating className={css.rating} name="customized-10" defaultValue={vote_average} precision={0.5} max={10.0} readOnly />
         </div>

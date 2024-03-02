@@ -2,18 +2,22 @@ import {NavLink} from "react-router-dom";
 
 import css from './Header.module.css'
 
-import {useTheme} from "../../hooks/useContest";
+import {useTheme} from "../../hooks/ThemeContext";
 const Header = () => {
 
     const { darkTheme, toggleTheme } = useTheme();
 
     return (
-        <div className={`${css.Header} ${css.bodyOne} ${css.one} `}>
+        <div className={`${css.Header} ${css.bodyOne} ${css.one} ${darkTheme ? css.headerLight : css.headerDark}`}>
             <p>MY MOVIES SITE</p>
             <NavLink to={'movies'}>Movies</NavLink>
             <NavLink to={'genres'}>Genres</NavLink>
             <NavLink to={`search`}>Search</NavLink>
-            <button className={`${css.toggleButton} ${darkTheme ? 'dark' : ''}`} onClick={toggleTheme}>
+            {/*<button onClick={toggleTheme} className={darkTheme ? 'dark' : 'light'}>*/}
+            {/*    Toggle Theme*/}
+            {/*</button>*/}
+            <button className={`${css.toggleButton} ${darkTheme ? 'dark' : 'light'}`}
+                    onClick={toggleTheme}>
                 {darkTheme ? 'Dark' : 'Light'}
             </button>
 

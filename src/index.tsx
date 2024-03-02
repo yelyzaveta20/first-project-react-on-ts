@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 import {router} from "./router";
-import {ThemeProvider} from "./hooks/useContest";
+import {ThemeProvider} from "./hooks/ThemeContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

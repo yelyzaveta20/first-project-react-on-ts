@@ -21,11 +21,12 @@
 img{
     height: 40vh;
     width: 13vw;
+    border-radius: 20px;
 }
 .buttons{
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*margin: 20px;*/
 }
 button{
     height: 4vh;
@@ -53,14 +54,15 @@ h2{
     justify-content: center;
     align-items: center;
     height: 5vh;
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
 
 }
-h2 .dark{
-    color: #f0f0f0;
+.movieLight h2{
+    color: #aad6f1;
 }
-.darkMovie{
-    color: #f0f0f0;
-}
-.lightMovie{
-    color: #020246;
+.movieLight button{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,0.5041666324733018) 0%, rgba(148,187,233,0.5013655120251226) 100%);
+    color: #e1fc0b;
 }

@@ -20,11 +20,20 @@ h2{
 .rating{
     margin-left: -10px;
 }
-.title{
-    justify-content: center;
+/*.title{*/
+/*    justify-content: center;*/
+/*}*/
+/*.buttons{*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    margin: 20px;*/
+/*}*/
+
+.genreOfMoviesLight h2{
+    color: #aad6f1;
 }
-.buttons{
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
+.genreOfMoviesLight button{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,0.5041666324733018) 0%, rgba(148,187,233,0.5013655120251226) 100%);
+    color: #e1fc0b;
 }

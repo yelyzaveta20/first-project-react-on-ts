@@ -24,6 +24,10 @@ display: flex;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+.headerLight.Header{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,0.49576327112876406) 0%, rgba(253,29,29,0.5013655120251226) 50%, rgba(252,176,69,0.5041666324733018) 100%);
+}
 a{
     text-decoration: none;
     color: #020246;
@@ -31,18 +35,22 @@ a{
     font-family: "Anton", sans-serif;
     font-weight: bold;
 }
-a.dark{
-    color: #ffffff;
+.headerLight a{
+    color: #dcb0b0;
 }
 .img{
     height: 70px;
     width: 70px;
 }
-button.dark{
-    background: chartreuse;
-    color: #020246;
+.headerLight button{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,0.5041666324733018) 0%, rgba(148,187,233,0.5013655120251226) 100%);
+    color: #e1fc0b;
 }
 .toggleButton{
     width: 5vw;
     border-radius: 20px;
+}
+.headerLight p{
+    color: #dcb0b0;
 }

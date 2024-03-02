@@ -9,23 +9,31 @@
     margin-right: 5px;
     margin-top: 5px;
 }
-.div button{
-    font-size: 20px;
-    border-radius: 10px;
-    border: 1px #652f06 solid;
-    background: #afc57a;
-    color: #020246;
-    font-family: "Noto Serif", serif;
-}
-/*a{*/
-/*    color: aqua;*/
-
+/*.div button{*/
+/*    font-size: 20px;*/
+/*    border-radius: 10px;*/
+/*    border: 1px #652f06 solid;*/
+/*    background: #afc57a;*/
+/*    color: #020246;*/
+/*    font-family: "Noto Serif", serif;*/
 /*}*/
-a.dark{
-    color: chartreuse;
-}
+
+
 .navLink{
     border: 1px black solid;
     padding:1.5px 3px 1.5px 3px;
     border-radius: 10px;background: rgba(175, 197, 122, 0.25);
+}
+.genreLight a{
+    background: rgb(243,241,3);
+    background: linear-gradient(14deg, rgba(243,241,3,0.4985643915769433) 8%, rgba(4,215,255,0.6862394616049545) 88%);
+    color: #00113b;
+}
+.genreLight h2{
+    color: #aad6f1;
+}
+.genreLight button{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,0.5041666324733018) 0%, rgba(148,187,233,0.5013655120251226) 100%);
+    color: #e1fc0b;
 }

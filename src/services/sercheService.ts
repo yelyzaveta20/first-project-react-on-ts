@@ -6,6 +6,6 @@ import {IMovie, IMovies} from "../interfaces/movisInterface";
 
 const sercheService={
     getAll:():IRes<ISerches>=>apiService.get(urls.serch.base),
-    getQuery:(query:string, page:any):IRes<IMovies>=>apiService.get(urls.serch.sercheByserch(query), {params:{page}})
+    getQuery:(query:string, page:string|null):IRes<IMovies>=>apiService.get(urls.serch.sercheByserch(query), {params:{page}})
 }
 export {sercheService}
