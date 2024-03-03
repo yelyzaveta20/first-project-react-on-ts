@@ -1,16 +1,10 @@
 
 body{
-display: flex;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.one{
-    background-color: #1515da;
-}
-.one.dark {
-    background-color: #191928; /* Цвет фона для темной темы */
-    color: #f0f0f0; /* Цвет текста для светлой темы */
-}
 .Header{
     height: 15vh;
     width: 79vw;

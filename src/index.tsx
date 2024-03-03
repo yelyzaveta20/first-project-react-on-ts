@@ -4,15 +4,16 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 import {router} from "./router";
-import {ThemeProvider} from "./hooks/ThemeContext";
+import {ThemeProvider} from "./hoc";
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
     <ThemeProvider>
-    <RouterProvider router={router}/>
-        </ThemeProvider>
+        <RouterProvider router={router}/>
+    </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

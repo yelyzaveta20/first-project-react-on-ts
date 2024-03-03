@@ -1,7 +1,7 @@
-import React from 'react';
 import {useSearchParams} from "react-router-dom";
 
 import css from './Paginations.module.css'
+
 const Paginations = () => {
     const [query, setQuery] = useSearchParams({page: '1'});
     const currentPage = query.get('page')?query.get('page'):'1'
@@ -19,9 +19,8 @@ const Paginations = () => {
     }
     return (
         <div className={css.paginationContainer}>
-            <button disabled={!currentPage || +currentPage === 1} onClick={prev} className={css.buttonPagination}>prev</button>
-
-            <button disabled={!currentPage || currentPage.length === 0} onClick={next} className={css.buttonPagination}>next</button>
+            <button disabled={!currentPage || +currentPage === 1} onClick={prev} >prev</button>
+            <button disabled={!currentPage || currentPage.length === 0} onClick={next} >next</button>
         </div>
     );
 };

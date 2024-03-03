@@ -1,4 +1,4 @@
-
+import {IGenre} from "./genreInterface";
 
 export interface IMovie {
     id:number,
@@ -18,7 +18,6 @@ export interface IMovies{
 export interface IMovieDetails {
     adult: boolean;
     backdrop_path: string;
-    belongs_to_collection: null | any; // You might need to create a more specific interface for collection
     budget: number;
     genres: IGenre[];
     homepage: string;
@@ -29,12 +28,9 @@ export interface IMovieDetails {
     overview: string;
     popularity: number;
     poster_path: string;
-    production_companies: IProductionCompany[];
-    production_countries: IProductionCountry[];
     release_date: string;
     revenue: number;
     runtime: number;
-    spoken_languages: ISpokenLanguage[];
     status: string;
     tagline: string;
     title: string;
@@ -43,25 +39,3 @@ export interface IMovieDetails {
     vote_count: number;
 }
 
-export interface IGenre {
-    id: number;
-    name: string;
-}
-
-export interface IProductionCompany {
-    id: number;
-    logo_path: string;
-    name: string;
-    origin_country: string;
-}
-
-export interface IProductionCountry {
-    iso_3166_1: string;
-    name: string;
-}
-
-export interface ISpokenLanguage {
-    english_name: string;
-    iso_639_1: string;
-    name: string;
-}

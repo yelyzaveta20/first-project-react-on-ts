@@ -1,16 +1,17 @@
 .GenreMovie{
-    /*display: grid;*/
-    /*grid-template-columns: repeat(5,1fr);*/
-    /*grid-column-gap: 20px;*/
-    /*grid-row-gap: 40px;*/
     width: 80vw;
-display: flex;
+    display: flex;
     flex-wrap: wrap;
 
 }
-h2{
-    height: 6vh;
-    width: 14vw;
+h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+    height: 5vh;
+    width: 13vw;
+    font-size: 22px;
 }
 .wrapper{
     display: flex;
@@ -20,16 +21,8 @@ h2{
 .rating{
     margin-left: -10px;
 }
-/*.title{*/
-/*    justify-content: center;*/
-/*}*/
-/*.buttons{*/
-/*    display: flex;*/
-/*    justify-content: space-around;*/
-/*    margin: 20px;*/
-/*}*/
 
-.genreOfMoviesLight h2{
+.genreOfMoviesLight h3{
     color: #aad6f1;
 }
 .genreOfMoviesLight button{

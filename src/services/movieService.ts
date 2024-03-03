@@ -1,12 +1,11 @@
 import {IRes} from "../types/responseType";
 import {apiService} from "./apiService";
-import {urls} from "../constans/urls";
 import {IMovieDetails, IMovies} from "../interfaces/movisInterface";
+import {urls} from "../constans";
 
 const movieService={
-    getAllPage:(page:any):IRes<IMovies>=>apiService.get(urls.movie.base, {params:{page}}),
-    getAll:():IRes<IMovies>=>apiService.get(urls.movie.base),
-    withGenserId:(idGenre:number, page:string|null='1'):IRes<IMovies>=>apiService.get(urls.movie.withGenser(idGenre), {params:{page}}),
-    detailsMovie:(idmovie:any):IRes<IMovieDetails>=>apiService.get(urls.movie.moviedetais(idmovie))
+    getAllPage:(page:string|null):IRes<IMovies>=>apiService.get(urls.movie.base, {params:{page}}),
+    withGenserId:(idGenre:number, page:string|null):IRes<IMovies>=>apiService.get(urls.movie.withGenser(idGenre), {params:{page}}),
+    detailsMovie:(idmovie:number):IRes<IMovieDetails>=>apiService.get(urls.movie.moviedetais(idmovie))
 }
 export {movieService}

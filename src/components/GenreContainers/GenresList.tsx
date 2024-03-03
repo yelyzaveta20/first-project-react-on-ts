@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
 
-import {genreService} from "../../services/genreService";
-
-import css from './Genre.module.css'
-import {useTheme} from "../../hooks/ThemeContext";
 import {IGenre} from "../../interfaces/genreInterface";
 import {Genre} from "./Genre";
+import {genreService} from "../../services";
+import {useTheme} from "../../hoc";
+import css from './Genre.module.css'
 
 const GenresList = () => {
     const [genres, setGenres] = useState<IGenre[]>([])

@@ -13,6 +13,7 @@
     box-shadow: 5px -9px 70px 24px rgba(2, 2, 70, 0.57);
     border-radius: 30px;
 }
+
 .informationMovie{
     display: block;
     justify-content: center;
@@ -30,11 +31,30 @@
     width: 25vw;
 
 }
+.buttonGenre{
+    height: 5vh;
+    width: 9vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.mainGenre{
+    display: flex;
+    justify-content:space-around;
+}
 .lider{
     display: flex;
     justify-content: center;
     align-items: center;
 
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #020246;
 }
 button{
     background: rgb(3,7,243);

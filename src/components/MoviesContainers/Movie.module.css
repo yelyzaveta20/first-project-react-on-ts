@@ -7,14 +7,13 @@
     width: 80vw;
     display: flex;
     flex-wrap: wrap;
-    color: #020246;
+    /*color: #020246;*/
 }
 
 .div{
-    /*width: 13vw;*/
-    /*cursor: pointer;*/
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    justify-content: center;
+    align-items: center;
     width: 16vw;
     cursor: pointer;
 }
@@ -23,11 +22,7 @@ img{
     width: 13vw;
     border-radius: 20px;
 }
-.buttons{
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-    /*margin: 20px;*/
-}
+
 button{
     height: 4vh;
     width: 7vw;
@@ -47,18 +42,18 @@ button{
 .rating{
     margin-left: -10px;
 }
-h2{
+h3{
     font-family: "Jacquarda Bastarda 9", serif;
     color: #020246;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
     height: 5vh;
-    /*overflow: hidden;*/
-    /*text-overflow: ellipsis;*/
-
+    width: 13vw;
+    font-size: 22px;
 }
-.movieLight h2{
+.movieLight h3{
     color: #aad6f1;
 }
 .movieLight button{

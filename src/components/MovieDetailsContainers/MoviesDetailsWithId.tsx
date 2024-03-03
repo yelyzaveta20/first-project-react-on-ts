@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {IMovieDetails} from "../../interfaces/movisInterface";
-import {movieService} from "../../services/movieService";
 import {useLocation} from "react-router-dom";
+
+import {IMovieDetails} from "../../interfaces/movisInterface";
 import {MovieDetails} from "./MovieDetails";
+import {movieService} from "../../services";
 
 const MoviesDetailsWithId = () => {
     const {pathname} =useLocation()

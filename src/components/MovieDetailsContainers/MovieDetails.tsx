@@ -1,19 +1,19 @@
-
-import {NavLink, useNavigate} from "react-router-dom";
-import css from './MovieDetails.module.css'
-import {poster} from "../../constans/urls";
+import {useNavigate} from "react-router-dom";
 import React, {FC} from "react";
-import {Badge, Rating} from "@mui/material";
+import {Rating} from "@mui/material";
+
 import {IMovieDetails} from "../../interfaces/movisInterface";
-import {useTheme} from "../../hooks/ThemeContext";
+import {poster} from "../../constans";
+import {useTheme} from "../../hoc";
+import css from './MovieDetails.module.css'
 interface IProps{
-    moviDetails:IMovieDetails|undefined
+    moviDetails:IMovieDetails
 }
 
 const MovieDetails: FC<IProps> = ({ moviDetails }) => {
 
 
-    const {id,
+    const {
         original_language,
         original_title,
         title,
@@ -26,9 +26,6 @@ const MovieDetails: FC<IProps> = ({ moviDetails }) => {
 
     const posterurl = `${poster}${poster_path}`;
     const navigate=useNavigate()
-    // const handle = () => {
-    //     navigate(`/genres/moviesgeeneres/${id}`)
-    // }
     const { darkTheme} = useTheme();
     return (
         <div className={`${css.Detauls} ${darkTheme ? css.movieDetailsLight : css.movieDetailsDark}`}>
@@ -36,7 +33,12 @@ const MovieDetails: FC<IProps> = ({ moviDetails }) => {
             <div className={css.lider}>
                 <div className={css.imgMovie}>
                     <h2 className={css.titleLider}>{title}</h2>
-                    <img className={css.imgDetails} src={posterurl} alt={title}/>
+
+                    {poster_path?(
+                        <img className={css.imgDetails}  src={posterurl} alt={title}/>
+                    ): (
+                        <img className={css.imgDetails}  src={`https://th.bing.com/th?id=OIF.s1S%2fxuarov%2fLtVlIpIFzaQ&rs=1&pid=ImgDetMain`} alt='none'/>
+                    )}
                 </div>
 
                 <div className={css.informationMovie}>
@@ -49,7 +51,10 @@ const MovieDetails: FC<IProps> = ({ moviDetails }) => {
                     <div>Overview:</div><div> {overview}</div>
                     <br/>
                     {/*<Badge badgeContent={id} color="secondary">*/}
-                        {genres.map(genre=><button onClick={() => navigate(`/genres/moviesgeeneres/${genre.id}`)}>{genre.name}</button>)}
+                    Genres:
+                    <div className={css.mainGenre}>
+                        {genres.map(genre=> <button className={css.buttonGenre} onClick={() => navigate(`/genres/moviesgeeneres/${genre.id}`)}>{genre.name}</button>)}
+                    </div>
                     {/*</Badge>*/}
                 </div>
 

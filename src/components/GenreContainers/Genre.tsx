@@ -1,9 +1,10 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
+import {NavLink} from "react-router-dom";
 
 import css from './Genre.module.css'
-import {NavLink, useNavigate} from "react-router-dom";
 import {IGenre} from "../../interfaces/genreInterface";
-import {useTheme} from "../../hooks/ThemeContext";
+import {useTheme} from "../../hoc";
+
 
 interface IProps{
     genre:IGenre

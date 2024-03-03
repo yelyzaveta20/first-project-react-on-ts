@@ -1,5 +1,5 @@
-import React from 'react';
 import {useSearchParams} from "react-router-dom";
+
 import css from "./Paginations.module.css";
 
 const PaginationsSerche = () => {
@@ -20,9 +20,9 @@ const PaginationsSerche = () => {
     }
     return (
         <div className={css.paginationContainer}>
-            <button disabled={!pageCurrent || +pageCurrent === 1} onClick={prev} className={css.buttonPagination}>prev</button>
+            <button disabled={!pageCurrent || +pageCurrent === 1} onClick={prev}>prev</button>
 
-            <button disabled={!pageCurrent || pageCurrent.length === 0} onClick={next} className={css.buttonPagination}>next</button>
+            <button disabled={!pageCurrent || pageCurrent.length === 0} onClick={next}>next</button>
         </div>
     );
 };
