@@ -53,7 +53,13 @@ const MovieDetails: FC<IProps> = ({ moviDetails }) => {
                     {/*<Badge badgeContent={id} color="secondary">*/}
                     Genres:
                     <div className={css.mainGenre}>
-                        {genres.map(genre=> <button className={css.buttonGenre} onClick={() => navigate(`/genres/moviesgeeneres/${genre.id}`)}>{genre.name}</button>)}
+                        {genres.map(genre => (
+                            <button
+                                key={genre.id}
+                                className={css.buttonGenre}
+                                onClick={() => navigate(`/genres/moviesgeeneres/${genre.id}`)}>{genre.name}
+                            </button>
+                        ))}
                     </div>
                     {/*</Badge>*/}
                 </div>
